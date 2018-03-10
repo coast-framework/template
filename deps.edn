@@ -1,4 +1,4 @@
-{:paths ["src"]
+{:paths ["src" "resources"]
  :deps
  {org.clojure/clojure {:mvn/version "1.9.0"}
   coast.alpha {:mvn/version "0.1.9"}}
@@ -19,4 +19,16 @@
 
   :nrepl {:extra-deps {org.clojure/tools.nrepl {:mvn/version "0.2.12"}}}
 
-  :cider {:extra-deps {cider/cider-nrepl {:mvn/version "0.15.1"}}}}}
+  :cider {:extra-deps {cider/cider-nrepl {:mvn/version "0.15.1"}}}
+
+  :db/rollback
+  {:main-opts ["-m" "coast.cli" "db:rollback"]}
+
+  :db/migrate
+  {:main-opts ["-m" "coast.cli" "db:migrate"]}
+
+  :db/create
+  {:main-opts ["-m" "coast.cli" "db:create" "{{name}}"]}
+
+  :db/drop
+  {:main-opts ["-m" "coast.cli" "db:drop" "{{name}}"]}}}

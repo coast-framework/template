@@ -1,22 +1,31 @@
 .PHONY: test
 
 run:
-	clj -m server
+  clj -m server
 
 test:
-	clj -A\:test
+  clj -A\:test
 
 clean:
-	rm -rf target
+  rm -rf target
 
 uberjar:
-	clj -A\:uberjar
+  clj -A\:uberjar
 
 server: uberjar
-	java -jar target/{{name}}.jar -m server
+  java -jar target/{{name}}.jar -m server
 
 nrepl:
-	clj -R:nrepl:cider bin/nrepl.clj
+  clj -R:nrepl:cider bin/nrepl.clj
 
 db/migrate:
-	clj -m coast.db/create {{name}}
+  clj -A\:db/migrate
+
+db/rollback:
+  clj -A\:db/rollback
+
+db/create:
+  clj -A\:db/create
+
+db/drop:
+  clj -A\:db/drop

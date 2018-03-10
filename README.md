@@ -5,14 +5,14 @@
 ```bash
 git clone git@github.com:your-user-name/{{name}}.git
 cd {{name}}
-coast db:create
-coast db:migrate
+make db/create
+make db/migrate
 ```
 
 ## Dev
 
 ```bash
-coast nrepl # starts an nrepl server
+make nrepl # starts an nrepl server
 ```
 
 ```clojure
@@ -26,8 +26,8 @@ curl http://localhost:1337 # or just open it in your browser
 
 ## Prod
 ```bash
-coast db:migrate
-coast clean
-coast uberjar
+make db/migrate
+make clean
+make uberjar
 java $JVM_OPTS -cp target/{{name}}.jar clojure.main -m server
 ```

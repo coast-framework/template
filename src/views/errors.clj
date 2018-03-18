@@ -1,21 +1,20 @@
 (ns views.errors
-  (:require [components :as c]
-            [coast.alpha :as coast]))
+  (:require [components :as c]))
 
 (defn not-found [request]
-  (coast/html5
-    [:head
-     [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]
-     (coast/include-css "/css/app.css")]
-    [:body
-     "Cound't find what you were looking for"
-     (coast/include-js "/js/app.js")]))
+  [:html
+   [:head
+    [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]
+    [:link {:href "/css/app.css" :type "text/css" :rel "stylesheet"}]]
+   [:body
+    "Cound't find what you were looking for"
+    [:script {:src "/js/app.js" :type "text/javascript"}]]])
 
 (defn internal-server-error [request]
-  (coast/html5
+  [:html
     [:head
      [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]
-     (coast/include-css "/css/app.css")]
+     [:link {:href "/css/app.css" :type "text/css" :rel "stylesheet"}]]
     [:body
      "Something went wrong!"
-     (coast/include-js "/js/app.js")]))
+     [:script {:src "/js/app.js" :type "text/javascript"}]]])

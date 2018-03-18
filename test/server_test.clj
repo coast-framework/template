@@ -1,6 +1,6 @@
 (ns server-test
-  (:require [clojure.test :refer :all]
-            [server :refer :all]))
+  (:require [clojure.test :refer [deftest testing is]]
+            [server :refer [app]]))
 
 (deftest home-test
   (testing "home route"

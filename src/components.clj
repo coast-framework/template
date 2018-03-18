@@ -1,16 +1,10 @@
-(ns components
-  (:require [coast.alpha :as coast]))
+(ns components)
 
 (defn layout [request body]
-  (coast/html5
+  [:html
     [:head
      [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]
-     (coast/include-css "/css/app.css")]
+     [:link {:href "/css/app.css" :type "text/css" :rel "stylesheet"}]]
     [:body
      body
-     (coast/include-js "/js/app.js")]))
-
-(defn form [attrs & content]
-  [:form attrs
-   (coast/csrf)
-   content])
+     [:script {:src "/js/app.s" :type "text/javascript"}]]])

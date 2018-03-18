@@ -1,12 +1,11 @@
 (ns controllers.errors
   (:require [views.errors :as views.errors]
-            [coast.alpha :as coast]))
+            [coast.responses :as res]))
 
 (defn not-found [request]
-  (coast/not-found
+  (res/not-found
     (views.errors/not-found request)))
 
 (defn internal-server-error [request]
-  (coast/internal-server-error
+  (res/internal-server-error
     (views.errors/internal-server-error request)))
-

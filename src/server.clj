@@ -1,6 +1,6 @@
 (ns server
-  (:require [coast.alpha :as coast]
-            [routes :refer [routes]]
+  (:require [coast.beta :as coast]
+            [coast.server :as server]
             [components :as c]
             [controllers.errors :as c.errors])
   (:gen-class))
@@ -9,10 +9,10 @@
            :error-fn c.errors/internal-server-error
            :not-found-fn c.errors/not-found})
 
-(def app (coast/app routes opts))
+(def app (coast/app opts))
 
 (defn coast []
-  (coast/start app))
+  (server/restart app))
 
-(defn -main [& [port]]
-  (coast/start app {:port port}))
+(defn -main [& args]
+  (server/start app))

@@ -1,8 +1,5 @@
 .PHONY: test
 
-run:
-	clj -m server
-
 test:
 	clj -A\:test
 

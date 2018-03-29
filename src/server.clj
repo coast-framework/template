@@ -1,9 +1,8 @@
 (ns server
   (:require [coast.beta :as coast]
-            [coast.server :as server]
-            [components :as c]
             [controllers.errors :as c.errors]
-            [routes :refer [routes]])
+            [routes :refer [routes]]
+            [components :as c])
   (:gen-class))
 
 (def opts {:layout c/layout
@@ -13,7 +12,7 @@
 (def app (coast/app routes opts))
 
 (defn coast []
-  (server/restart app))
+  (coast/restart-server app))
 
 (defn -main [& args]
-  (server/start app))
+  (coast/start-server app))

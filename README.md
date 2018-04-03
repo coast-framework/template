@@ -24,7 +24,7 @@ make nrepl # starts an nrepl server
 curl http://localhost:1337 # or just open it in your browser
 ```
 
-## Prod
+## Ship
 ```bash
 make db/migrate
 make clean

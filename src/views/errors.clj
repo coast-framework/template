@@ -1,5 +1,4 @@
-(ns views.errors
-  (:require [components :as c]))
+(ns views.errors)
 
 (defn not-found [request]
   [:html

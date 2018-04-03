@@ -1,5 +1,5 @@
 (ns server
-  (:require [coast.beta :as coast]
+  (:require [coast.gamma :as coast]
             [coast.server :as server]
             [controllers.errors :as c.errors]
             [routes :refer [routes]]

@@ -7,4 +7,4 @@
      [:link {:href "/css/app.css" :type "text/css" :rel "stylesheet"}]]
     [:body
      body
-     [:script {:src "/js/app.s" :type "text/javascript"}]]])
+     [:script {:src "/js/app.js" :type "text/javascript"}]]])

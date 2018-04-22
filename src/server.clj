@@ -7,8 +7,8 @@
   (:gen-class))
 
 (def opts {:layout c/layout
-           :404 c.errors/internal-server-error
-           :500 c.errors/not-found})
+           :404 c.errors/not-found
+           :500 c.errors/internal-server-error})
 
 (def app (coast/app routes opts))
 

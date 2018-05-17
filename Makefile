@@ -26,3 +26,6 @@ db/create:
 
 db/drop:
 	clj -A\:db/drop
+
+worker:
+	clj -m coast.worker

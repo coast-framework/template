@@ -2,7 +2,7 @@
  :deps
  {org.clojure/clojure {:mvn/version "1.9.0"}
   coast.delta {:git/url "https://github.com/swlkr/coast.git"
-               :sha "9cd39ebabd40e3c94d9aa2c7fd9b7b374bc68eaa"}}
+               :sha "0e9913f1c609bfb8b391300810f742390e9b6028"}}
 
  :aliases
  {:test

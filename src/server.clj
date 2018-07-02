@@ -2,7 +2,6 @@
   (:require [coast.delta :as coast]
             [coast.dev.server :as dev.server]
             [coast.prod.server :as prod.server]
-            [coast.middleware]
             [views.errors]
             [components]
             [routes])
@@ -12,8 +11,7 @@
            :404 views.errors/not-found
            :500 views.errors/internal-server-error})
 
-(def app (-> (coast/app routes/routes opts)
-             (coast.middleware/wrap-reload)))
+(def app (coast/app routes/routes opts))
 
 (defn coast []
   (dev.server/restart app))

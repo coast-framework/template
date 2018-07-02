@@ -16,7 +16,7 @@ make nrepl # starts an nrepl server
 ```
 
 ```clojure
-; in your editor to the nrepl server
+; in your editor, connect to the nrepl server
 (coast)
 ```
 
@@ -28,6 +28,5 @@ curl http://localhost:1337 # or just open it in your browser
 ```bash
 make db/migrate
 make clean
-make uberjar
-java $JVM_OPTS -cp target/{{name}}.jar clojure.main -m server
+make server
 ```

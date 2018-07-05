@@ -1,8 +1,8 @@
 {:paths ["src" "resources"]
  :deps
  {org.clojure/clojure {:mvn/version "1.9.0"}
-  coast.delta {:git/url "https://github.com/swlkr/coast.git"
-               :sha "364399e611eee27e61c763fef1aa707e30eef2af"}}
+  coast.epsilon {:git/url "https://github.com/coast-framework/coast.git"
+                 :sha "b742c50e841c96ff4a820808dc6013a26063fc07"}}
 
  :aliases
  {:test

@@ -1,5 +1,5 @@
 (ns server
-  (:require [coast.delta :as coast]
+  (:require [coast.epsilon :as coast]
             [coast.dev.server :as dev.server]
             [coast.prod.server :as prod.server]
             [views.errors]

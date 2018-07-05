@@ -2,7 +2,7 @@
  :deps
  {org.clojure/clojure {:mvn/version "1.9.0"}
   coast.epsilon {:git/url "https://github.com/coast-framework/coast.git"
-                 :sha "b742c50e841c96ff4a820808dc6013a26063fc07"}}
+                 :sha "302ded40e5906848aa977a458b8eb93936b724b1"}}
 
  :aliases
  {:test

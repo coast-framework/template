@@ -9,8 +9,8 @@ clean:
 uberjar:
 	clj -A\:uberjar
 
-server: uberjar
-	java -jar target/{{name}}.jar -m server
+server:
+	clj -m server
 
 nrepl:
 	clj -R:nrepl:cider bin/nrepl.clj

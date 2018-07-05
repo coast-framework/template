@@ -11,8 +11,5 @@
 
 (def app (coast/app routes/routes opts))
 
-(defn coast [port]
-  (coast/server app {:port port}))
-
 (defn -main [& [port]]
-  (coast port))
+  (coast/server app {:port port}))

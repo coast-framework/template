@@ -1,7 +1,5 @@
 (ns server
   (:require [coast.epsilon :as coast]
-            [coast.dev.server :as dev.server]
-            [coast.prod.server :as prod.server]
             [views.errors]
             [components]
             [routes])
@@ -13,8 +11,8 @@
 
 (def app (coast/app routes/routes opts))
 
-(defn coast []
-  (dev.server/restart app))
+(defn coast [port]
+  (coast/server app {:port port}))
 
-(defn -main [& args]
-  (prod.server/start app))
+(defn -main [& [port]]
+  (coast port))

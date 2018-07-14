@@ -1,5 +1,5 @@
 (ns server
-  (:require [coast.epsilon :as coast]
+  (:require [coast.zeta :as coast]
             [views.errors]
             [components]
             [routes])

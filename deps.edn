@@ -1,8 +1,7 @@
 {:paths ["src" "resources"]
  :deps
  {org.clojure/clojure {:mvn/version "1.9.0"}
-  coast.zeta {:git/url "https://github.com/coast-framework/coast.git"
-              :sha "f6b47d385ce04dbceacb03d149702bc71430bec0"}}
+  coast-framework/coast.zeta {:mvn/version "1.3.1"}}
 
  :aliases
  {:test
@@ -13,10 +12,10 @@
                                :sha "5f2b5c2efb444df76fb5252102b33f542ebf7f58"}}}
 
   :uberjar
-  {:main-opts ["-m" "mach.pack.alpha.capsule" "deps.edn" "target/{{name}}.jar"]
-   :extra-deps
-   {pack/pack.alpha {:git/url "https://github.com/juxt/pack.alpha.git"
-                     :sha     "bb2c5a2c78aca9328e023b029c06ba0efdd1e3b7"}}}
+  {:extra-deps
+   {luchiniatwork/cambada {:mvn/version "1.0.0"}}
+   :main-opts ["-m" "cambada.uberjar" "-m" "server"
+               "--app-version" "1.0.0"]}
 
   :nrepl {:extra-deps {org.clojure/tools.nrepl {:mvn/version "0.2.12"}}}
 

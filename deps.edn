@@ -18,9 +18,7 @@
                "--app-version" "1.0.0"
                "--app-artifact-id" "{{name}}"]}
 
-  :nrepl {:extra-deps {org.clojure/tools.nrepl {:mvn/version "0.2.12"}}}
-
-  :cider {:extra-deps {cider/cider-nrepl {:mvn/version "0.15.1"}}}
+  :repl {:extra-deps {nrepl {:mvn/version "0.4.2"}}}
 
   :db/rollback
   {:main-opts ["-m" "coast.cli" "db:rollback"]}

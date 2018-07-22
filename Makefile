@@ -12,8 +12,8 @@ uberjar:
 server:
 	clj -m server
 
-nrepl:
-	clj -R:nrepl:cider bin/nrepl.clj
+repl:
+	clj -R:nrepl bin/repl.clj
 
 db/migrate:
 	clj -A\:db/migrate

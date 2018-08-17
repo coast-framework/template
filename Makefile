@@ -13,7 +13,7 @@ server:
 	clj -m server
 
 repl:
-	clj -R:nrepl bin/repl.clj
+	clj -R:repl bin/repl.clj
 
 db/migrate:
 	clj -A\:db/migrate

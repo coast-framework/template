@@ -1,13 +1,14 @@
 (ns server
-  (:require [coast.zeta :as coast]
-            [views.errors]
+  (:require [error.internal-server-error]
+            [coast.zeta :as coast]
+            [error.not-found]
             [components]
             [routes])
   (:gen-class))
 
 (def opts {:layout components/layout
-           :404 views.errors/not-found
-           :500 views.errors/internal-server-error})
+           :404 error.not-found/view
+           :500 error.internal-server-error/view})
 
 (def app (coast/app routes/routes opts))
 

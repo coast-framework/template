@@ -1,4 +1,4 @@
-(ns views.home)
+(ns home.index)
 
-(defn index [request]
+(defn view [request]
   [:h1 "You're coasting on clojure!"])

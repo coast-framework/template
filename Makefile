@@ -29,3 +29,6 @@ db/drop:
 
 worker:
 	clj -m coast.worker
+
+assets:
+	clj -m coast.assets

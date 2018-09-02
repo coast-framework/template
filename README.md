@@ -12,12 +12,14 @@ make db/migrate
 ## Dev
 
 ```bash
-make nrepl # starts an nrepl server
+make repl # starts an nrepl server
 ```
 
 ```clojure
 ; in your editor, connect to the nrepl server
-(coast)
+; in atom with proto-repl, it's Ctrl+Cmd+Y then enter
+; then when you're in the repl type evaluate -main
+(-main)
 ```
 
 ```bash
@@ -27,6 +29,7 @@ curl http://localhost:1337 # or just open it in your browser
 ## Ship
 ```bash
 make db/migrate
-make clean
-make server
+make assets
+make uberjar
+java -jar target/{{name}}-1.0.0-standalone.jar -m server 1337
 ```

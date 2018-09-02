@@ -1,5 +1,5 @@
 (ns components
-  (:require [coast.components :refer [css js]]))
+  (:require [coast :refer [css js]]))
 
 (defn layout [request body]
   [:html

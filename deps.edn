@@ -1,7 +1,7 @@
 {:paths ["src" "resources"]
  :deps
  {org.clojure/clojure {:mvn/version "1.9.0"}
-  coast-framework/coast.zeta {:mvn/version "1.7.1"}}
+  coast-framework/coast.eta {:mvn/version "1.0.0"}}
 
  :aliases
  {:test
@@ -12,7 +12,8 @@
                                :sha "5f2b5c2efb444df76fb5252102b33f542ebf7f58"}}}
 
   :uberjar
-  {:main-opts ["-m" "cambada.uberjar" "-m" "server"
+  {:main-opts ["-m" "cambada.uberjar"
+               "-m" "server"
                "--app-version" "1.0.0"
                "--app-artifact-id" "{{name}}"]
    :extra-deps

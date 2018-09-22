@@ -9,4 +9,4 @@
        (css "bundle.css")
        (js "bundle.js")]
       [:body
-       "Something went wrong!"]]))
+       [:h1 "Something went wrong!"]]]))

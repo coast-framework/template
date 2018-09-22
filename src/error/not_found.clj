@@ -10,4 +10,4 @@
       (css "bundle.css")
       (js "bundle.js")]
      [:body
-      "Cound't find what you were looking for"]]))
+      [:h1 "Couldn't find what you were looking for"]]]))

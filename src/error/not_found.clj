@@ -1,4 +1,4 @@
-(ns error.404
+(ns error.not-found
   (:require [coast :refer [css js not-found]]))
 
 (defn view [request]

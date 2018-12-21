@@ -12,23 +12,17 @@ uberjar:
 repl:
 	clj -R:repl bin/repl.clj
 
-db/migrate:
-	clj -A\:db/migrate
-
-db/rollback:
-	clj -A\:db/rollback
-
-db/create:
-	clj -A\:db/create
-
-db/drop:
-	clj -A\:db/drop
-
-jobs:
-	clj -m coast.jobs
-
 assets:
 	clj -m coast.assets
 
 routes:
 	clj -m coast.router
+
+routes:
+	clj -m coast.router
+
+migrate:
+	clj -m coast.db migrate $(OPTS)
+
+rollback:
+	clj -m coast.db rollback

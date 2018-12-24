@@ -1,11 +1,12 @@
 (ns server
   (:require [coast]
-            [routes]
-            [components])
+            [routes])
   (:gen-class))
 
-(def app (coast/app {:routes routes/routes
-                     :layout components/layout}))
+(def app (coast/app {:routes routes/routes}))
 
 (defn -main [& [port]]
   (coast/server app {:port port}))
+
+(comment
+  (-main))

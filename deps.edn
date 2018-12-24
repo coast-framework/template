@@ -1,34 +1,18 @@
 {:paths ["src" "resources"]
- :deps
- {org.clojure/clojure {:mvn/version "1.9.0"}
-  coast-framework/coast.eta {:mvn/version "1.0.3"}}
+ :deps {org.clojure/clojure {:mvn/version "1.9.0"}
+        coast-framework/coast.theta {:mvn/version "1.0.0"}}
 
  :aliases
- {:test
-  {:extra-paths ["test"]
-   :main-opts ["-m" "cognitect.test-runner"]
-   :extra-deps
-   {com.cognitect/test-runner {:git/url "git@github.com:cognitect-labs/test-runner"
-                               :sha "5f2b5c2efb444df76fb5252102b33f542ebf7f58"}}}
+ {:test {:extra-paths ["test"]
+         :main-opts ["-m" "cognitect.test-runner"]
+         :extra-deps {com.cognitect/test-runner {:git/url "git@github.com:cognitect-labs/test-runner"
+                                                 :sha "5f2b5c2efb444df76fb5252102b33f542ebf7f58"}}}
 
-  :uberjar
-  {:main-opts ["-m" "mach.pack.alpha.capsule"
-               "-m" "server"
-               "-e" "target"
-               "target/{{name}}.jar"]
-   :extra-deps {pack/pack.alpha {:git/url "https://github.com/juxt/pack.alpha.git"
-                                 :sha "d9023b24c3d589ba6ebc66c5a25c0826ed28ead5"}}}
+  :uberjar {:main-opts ["-m" "mach.pack.alpha.capsule"
+                        "-m" "server"
+                        "-e" "target"
+                        "target/{{name}}.jar"]
+            :extra-deps {pack/pack.alpha {:git/url "https://github.com/juxt/pack.alpha.git"
+                                          :sha "d9023b24c3d589ba6ebc66c5a25c0826ed28ead5"}}}
 
-  :repl {:extra-deps {nrepl {:mvn/version "0.4.2"}}}
-
-  :db/rollback
-  {:main-opts ["-m" "coast.cli" "db:rollback"]}
-
-  :db/migrate
-  {:main-opts ["-m" "coast.cli" "db:migrate"]}
-
-  :db/create
-  {:main-opts ["-m" "coast.cli" "db:create" "{{name}}"]}
-
-  :db/drop
-  {:main-opts ["-m" "coast.cli" "db:drop" "{{name}}"]}}}
+  :repl {:extra-deps {nrepl {:mvn/version "0.4.5"}}}}}

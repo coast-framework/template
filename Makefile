@@ -18,11 +18,8 @@ assets:
 routes:
 	clj -m coast.router
 
-routes:
-	clj -m coast.router
-
 migrate:
 	clj -m coast.db migrate $(OPTS)
 
 rollback:
-	clj -m coast.db rollback
+	clj -m coast.db rollback $(OPTS)

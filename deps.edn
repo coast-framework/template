@@ -1,6 +1,6 @@
-{:paths ["src" "resources"]
+{:paths ["src" "db"]
  :deps
- {org.clojure/clojure {:mvn/version "1.9.0"}
+ {org.clojure/clojure {:mvn/version "1.10.0"}
   coast-framework/coast.theta {:mvn/version "1.0.0"}
   org.xerial/sqlite-jdbc {:mvn/version "3.25.2"}}
 
@@ -13,10 +13,7 @@
                                :sha "5f2b5c2efb444df76fb5252102b33f542ebf7f58"}}}
 
   :uberjar
-  {:main-opts ["-m" "mach.pack.alpha.capsule"
-               "-m" "server"
-               "-e" "target"
-               "target/{{name}}.jar"]
+  {:main-opts ["-m" "mach.pack.alpha.capsule" "-m" "server" "-e" "target" "target/{{name}}.jar"]
    :extra-deps {pack/pack.alpha {:git/url "https://github.com/juxt/pack.alpha.git"
                                  :sha "d9023b24c3d589ba6ebc66c5a25c0826ed28ead5"}}}
 

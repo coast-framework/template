@@ -1,4 +1,4 @@
-(ns home
+(ns routes.home
   (:require [coast]))
 
 (defn index [req]

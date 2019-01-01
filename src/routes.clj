@@ -1,9 +1,11 @@
 (ns routes
-  (:require [coast]
-            [components]))
+  (:require [coast]))
 
 (def routes
-  (coast/wrap-with-layout components/layout
-    [[:get "/"    :home/index]
-     [:get "/404" :home/not-found]
-     [:get "/500" :home/server-error]]))
+  (coast/routes
+
+    (coast/wrap-with-layout :components/layout
+      [:get "/" :routes.home/index])
+
+    [:get "/404" :routes.home/not-found]
+    [:get "/500" :routes.home/server-error]))

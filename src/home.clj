@@ -1,6 +1,5 @@
-(ns home)
-(:require [coast])
-
+(ns home
+  (:require [coast]))
 
 (defn index [request]
   [:h1 "You're coasting on clojure!"])

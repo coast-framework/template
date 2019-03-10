@@ -1,7 +1,9 @@
 {:paths ["db" "src" "resources"]
+
  :deps
- {org.clojure/clojure {:mvn/version "1.9.0"}
-  coast-framework/coast.theta {:mvn/version "1.0.0"}}
+ {org.clojure/clojure {:mvn/version "1.10.0"}
+  coast-framework/coast.theta {:mvn/version "1.0.0"}
+  org.xerial/sqlite-jdbc {:mvn/version "3.25.2"}}
 
  :aliases
  {:test

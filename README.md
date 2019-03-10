@@ -18,7 +18,7 @@ make repl # starts an nrepl server
 ```clojure
 ; in your editor, connect to the nrepl server
 ; in atom with proto-repl, it's Ctrl+Cmd+Y then enter
-; then when you're in the repl type evaluate -main
+; then when you're in the repl evaluate -main
 (-main)
 ```
 

@@ -2,8 +2,9 @@
   (:require [coast]
             [components]))
 
-(defn routes []
-  (coast/wrap-with-layout components/layout
-    [:get  "/"                         :home/index]
-    [:get  "/404"                      :home/not-found]
-    [:get  "/500"                      :home/server-error]))
+(def routes
+  (coast/routes
+    (coast/site-routes components/layout
+      [:get "/" :home/index]
+      [:404 :home/not-found]
+      [:500 :home/server-error])))

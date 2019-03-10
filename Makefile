@@ -15,9 +15,6 @@ repl:
 assets:
 	clj -m coast.assets
 
-routes:
-	clj -m coast.router
-
 server:
 	clj -m server
 

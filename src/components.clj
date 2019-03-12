@@ -12,19 +12,46 @@
      body]])
 
 
-(defn link-to [k & args]
-  (let [m (if (map? (first args))
-            (first args)
-            {})
-        body (if (and (empty? m)
-                      (or (vector? (first args))
-                          (string? (first args))))
-              (first args)
-              (second args))
-        params (merge {:class "f6 link dim br2 ph3 pv2 dib blue underline"
-                       :href (coast/url-for k m)}
-                      m)]
-    [:a params body]))
+(defn link-to [url & body]
+  [:a {:href url :class "f6 link underline blue"}
+    body])
+
+
+(defn button-to
+  ([am m s]
+   (let [data (select-keys m [:data-confirm])
+         form (select-keys m [:action :method :class])]
+     (coast/form (merge {:class "dib ma0"} form)
+       [:input (merge data {:class "input-reset pointer link underline bn f6 br2 ma0 pa0 dib blue bg-transparent"
+                            :type "submit"
+                            :value s})])))
+  ([am s]
+   (button-to am {} s)))
+
+
+(defn container [m & body]
+  (let [mw (or (:mw m) 8)]
+    [:div {:class (str "pa4 w-100 center mw" mw)}
+     [:div {:class "overflow-auto"}
+       body]]))
+
+
+(defn table [& body]
+  [:table {:class "f6 w-100" :cellspacing 0}
+   body])
+
+
+(defn thead [& body]
+  [:thead body])
+
+
+(defn tbody [& body]
+  [:tbody {:class "lh-copy"} body])
+
+
+(defn tr [& body]
+  [:tr {:class "stripe-dark"}
+   body])
 
 
 (defn th
@@ -33,16 +60,9 @@
   ([]
    (th "")))
 
-(defn a
-  ([k s]
-   (a k {} s))
-  ([k m s]
-   [:a {:href (coast/url-for k m) :class "f6 link underline blue"}
-    s]))
-
 
 (defn td [& body]
-  [:td {:class "pa2"} body])
+  [:td {:class "pa3"} body])
 
 
 (defn submit [value]
@@ -59,19 +79,8 @@
   [:dd {:class "ml0"} s])
 
 
-(defn delete-button [k & args]
-  (let [m (if (map? (first args))
-            (first args)
-            {})
-        s (if (and (empty? m)
-                   (string? (first args)))
-            (first args)
-            (second args))]
-    (coast/form-for k m {:class "dib ma0"}
-     [:input {:class "input-reset pointer link underline db bn f6 br2 ph3 pv2 dib blue bg-transparent"
-              :type "submit"
-              :value s
-              :data-confirm "Are you sure?"}])))
+(defn dl [& body]
+  [:dl body])
 
 
 (defn form-for
@@ -91,3 +100,18 @@
 
 (defn input [m]
   [:input (merge {:class "input-reset ba b--black-20 pa2 mb2 db w-100"} m)])
+
+
+(defn text-muted [s]
+  [:div {:class "f6 tc gray"}
+   s])
+
+
+(defn el [k m]
+  (fn [& body]
+    [k m body]))
+
+
+(->> [:mr1 :mr2 :mr3 :mr4 :mr5]
+     (mapv name)
+     (mapv #(coast/intern-var % (el :span {:class %}))))

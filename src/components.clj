@@ -20,7 +20,7 @@
 (defn button-to
   ([am m s]
    (let [data (select-keys m [:data-confirm])
-         form (select-keys m [:action :method :class])]
+         form (select-keys am [:action :_method :method :class])]
      (coast/form (merge {:class "dib ma0"} form)
        [:input (merge data {:class "input-reset pointer link underline bn f6 br2 ma0 pa0 dib blue bg-transparent"
                             :type "submit"

@@ -115,3 +115,8 @@
 (->> [:mr1 :mr2 :mr3 :mr4 :mr5]
      (mapv name)
      (mapv #(coast/intern-var % (el :span {:class %}))))
+
+
+(defn tc [& body]
+  [:div {:class "tc"}
+   body])

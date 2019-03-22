@@ -1,5 +1,4 @@
-{:paths ["src"]
- :extra-paths ["db" "resources"]
+{:paths ["db" "resources" "src"]
 
  :deps
  {org.clojure/clojure {:mvn/version "1.10.0"}

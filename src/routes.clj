@@ -1,5 +1,6 @@
 (ns routes
-  (:require [coast]))
+  (:require [coast]
+            [components]))
 
 (def routes
   (coast/site

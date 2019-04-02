@@ -3,9 +3,12 @@
             [components]))
 
 (def routes
-  (coast/site
-    (coast/with-layout :components/layout
-      [:get "/" :home/index])
+  (coast/routes
 
-    [:404 :home/not-found]
-    [:500 :home/server-error]))
+    (coast/site
+      (coast/with-layout :components/layout
+        [:get "/" :home/index]))
+
+    (coast/api
+      (coast/with-prefix "/api"
+        [:get "/api" :api.home/index]))))

@@ -99,7 +99,7 @@
 
 
 (defn input [m]
-  [:input (merge {:class "input-reset ba b--black-20 pa2 mb2 db w-100"} m)])
+  [:input (merge {:class "input-reset ba b--black-20 pa2 mb2 db w-100 outline-0"} m)])
 
 
 (defn text-muted [s]

@@ -1,11 +1,12 @@
-$(function() {
-  $(document).on("click", "[data-confirm]", function(e) {
+document.addEventListener('DOMContentLoaded', function() {
+  document.body.addEventListener("click", function(e) {
     e.preventDefault();
-    var el = e.target;
-    var $this = $(this);
 
-    if(confirm($this.data('confirm'))) {
-      $this.closest('form').submit();
+    var el = e.target;
+
+    var confirmMessage = el.getAttribute("data-confirm");
+    if(confirmMessage && confirm(confirmMessage)) {
+      el.closest('form').submit();
     }
-  })
-})
+  });
+});

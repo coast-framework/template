@@ -1,2 +1,2 @@
 {"bundle.css" ["tachyons.min.css" "app.css"]
- "bundle.js" ["jquery-3.3.1.min.js" "app.js"]}
+ "bundle.js" ["app.js"]}

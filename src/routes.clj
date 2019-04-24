@@ -11,4 +11,4 @@
 
     (coast/api
       (coast/with-prefix "/api"
-        [:get "/api" :api.home/index]))))
+        [:get "/" :api.home/index]))))

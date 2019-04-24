@@ -6,8 +6,8 @@
   (coast/routes
 
     (coast/site
-      (coast/with-layout :components/layout
-        [:get "/" :home/index]))
+      (coast/with-layout components/layout
+        [:get "/" :site.home/index]))
 
     (coast/api
       (coast/with-prefix "/api"

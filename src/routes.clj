@@ -1,14 +1,8 @@
 (ns routes
   (:require [coast]
-            [components]))
+            [routes.home]))
 
-(def routes
+
+(def app
   (coast/routes
-
-    (coast/site
-      (coast/with-layout components/layout
-        [:get "/" :site.home/index]))
-
-    (coast/api
-      (coast/with-prefix "/api"
-        [:get "/" :api.home/index]))))
+    routes.home/routes))

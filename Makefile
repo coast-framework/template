@@ -6,11 +6,8 @@ test:
 clean:
 	rm -rf target
 
-uberjar:
-	clj -A\:uberjar
-
 repl:
-	clj -R:repl bin/repl.clj
+	clj -A\:repl
 
 assets:
 	clj -m coast.assets

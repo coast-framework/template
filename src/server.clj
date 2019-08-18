@@ -1,6 +1,6 @@
 (ns server
   (:require [coast]
-            [layout]
+            [layouts]
             [routes]))
 
 
@@ -8,10 +8,10 @@
 
 
 (def app (-> (coast/app routes/app)
-             (coast/layout layout/app)
-             (coast/set-db db)
              (coast/not-found)
              (coast/server-error)
+             (coast/layout layouts/app)
+             (coast/set-db db)
              (coast/sessions)
              (coast/body-parser)
              (coast/cookies)

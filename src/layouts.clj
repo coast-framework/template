@@ -1,4 +1,4 @@
-(ns layout
+(ns layouts
   (:require [coast]))
 
 

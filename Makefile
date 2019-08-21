@@ -4,7 +4,7 @@ test:
 	COAST_ENV=test clj -A\:test
 
 clean:
-	rm -rf target
+	rm -rf target/*
 
 uberjar:
 	clj -A\:uberjar

@@ -1,16 +1,12 @@
 {:paths ["db" "src" "resources"]
 
- :deps
- {org.clojure/clojure {:mvn/version "1.10.0"}
-  coast-framework/coast {:mvn/version "0.1.0-SNAPSHOT"}
-  org.xerial/sqlite-jdbc {:mvn/version "3.25.2"}}
+ :deps {org.clojure/clojure {:mvn/version "1.10.0"}
+        coast-framework/coast {:mvn/version "0.1.0-SNAPSHOT"}
+        org.xerial/sqlite-jdbc {:mvn/version "3.25.2"}}
 
- :aliases
- {:test
-  {:extra-paths ["test"]
-   :main-opts ["-m" "cognitect.test-runner"]
-   :extra-deps
-   {com.cognitect/test-runner {:git/url "git@github.com:cognitect-labs/test-runner"
-                               :sha "5f2b5c2efb444df76fb5252102b33f542ebf7f58"}}}
+ :aliases {:test {:extra-paths ["test"]
+                  :main-opts ["-m" "cognitect.test-runner"]
+                  :extra-deps {com.cognitect/test-runner {:git/url "git@github.com:cognitect-labs/test-runner"
+                                                          :sha "5f2b5c2efb444df76fb5252102b33f542ebf7f58"}}}
 
-  :repl {:jvm-opts ["-Dclojure.server.repl={:port,5555,:accept,clojure.core.server/repl}"]}}}
+           :repl {:jvm-opts ["-Dclojure.server.repl={:port,5555,:accept,clojure.core.server/repl}"]}}}

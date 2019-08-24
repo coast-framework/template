@@ -31,5 +31,5 @@ curl http://localhost:1337 # or just open it in your browser
 make db/migrate
 make assets
 make uberjar
-java -jar target/{{name}}.jar 1337
+java -jar target/{{name}}.jar -m server 1337
 ```

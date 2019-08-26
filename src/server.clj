@@ -19,8 +19,7 @@
              (coast/head)
              (coast/security-headers)
              (coast/logger)
-             (coast/assets)
-             (coast/reload)))
+             (coast/assets)))
 
 
 (defn -main [& [port]]

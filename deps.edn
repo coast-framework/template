@@ -1,7 +1,7 @@
 {:paths ["db" "src" "resources"]
 
- :deps {org.clojure/clojure {:mvn/version "1.10.0"}
         coast-framework/coast {:mvn/version "0.1.0-SNAPSHOT"}
+ :deps {org.clojure/clojure {:mvn/version "1.10.1"}
         org.xerial/sqlite-jdbc {:mvn/version "3.28.0"}}
 
  :aliases {:test {:extra-paths ["test"]

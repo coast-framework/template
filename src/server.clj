@@ -1,7 +1,8 @@
 (ns server
   (:require [coast]
             [layouts]
-            [routes]))
+            [routes])
+  (:gen-class))
 
 
 (def db (coast/db))

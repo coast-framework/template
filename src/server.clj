@@ -13,12 +13,13 @@
              (coast/server-error)
              (coast/layout layouts/app)
              (coast/set-db db)
+             (coast/logger)
+             (coast/simulated-methods)
              (coast/sessions)
              (coast/body-parser)
              (coast/cookies)
              (coast/head)
              (coast/security-headers)
-             (coast/logger)
              (coast/assets)))
 
 

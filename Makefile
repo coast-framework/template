@@ -10,7 +10,7 @@ repl:
 	clj -Arepl
 
 assets:
-	clj -m coast.assets
+	clj -m assets.core
 
 server:
 	clj -m server

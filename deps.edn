@@ -3,7 +3,7 @@
  :deps
  {org.clojure/clojure         {:mvn/version "1.10.0"}
   coast-framework/coast.theta {:mvn/version "1.6.0"}
-  org.xerial/sqlite-jdbc      {:mvn/version "3.34.0"}}
+  org.xerial/sqlite-jdbc      {:mvn/version "3.39.3.0"}}
 
  :aliases
  {:test
